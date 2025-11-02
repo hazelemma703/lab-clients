@@ -1,3 +1,4 @@
 spring:
   application:
     name: backend
+    # psql 'postgresql://weather_db_owner:1RKIPdo8uAvT@ep-soft-frost-a5jrxwwz-pooler.us-east-2.aws.neon.tech/weather_db?sslmode=require&channel_binding=require'
