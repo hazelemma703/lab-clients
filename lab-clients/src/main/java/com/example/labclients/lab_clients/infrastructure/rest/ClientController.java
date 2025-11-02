@@ -28,11 +28,6 @@ public class ClientController {
 
     @GetMapping("/{id}")
     public ClientDTO getClientById(@PathVariable("id") String id) {
-        return clientService.getClientById(java.util.UUID.fromString(id));
-    }
-
-    @GetMapping("/details")
-    public Client getClientDetailsByEmail(@RequestParam("email") String email) {
-        return clientService.getClientDetailsById(email);
+        return clientService.getClientById(Long.valueOf(id));
     }
 }

@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 public class BeanConfig {
 
     @Bean
-    public ClientService clientService(SpringDataClientRepository springDataClientRepository){
-        return new ClientService((ClientRepository) springDataClientRepository);
+    public ClientService clientService(ClientRepository clientRepository){
+        return new ClientService(clientRepository);
     }
 }

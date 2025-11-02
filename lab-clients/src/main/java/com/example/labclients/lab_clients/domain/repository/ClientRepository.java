@@ -8,10 +8,8 @@ import java.util.UUID;
 
 public interface ClientRepository {
     Client save(Client client);
-    Optional<Client> findById(UUID id);
+    Optional<Client> findById(Long id);
     List<Client> findAll();
 
     boolean existsByEmail(String email);
-
-    Optional<Client> detailsByIdAndEmail(String email);
 }

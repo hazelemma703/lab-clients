@@ -6,8 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 import java.util.UUID;
 
-public interface SpringDataClientRepository extends JpaRepository<ClientEntity, UUID> {
+public interface SpringDataClientRepository extends JpaRepository<ClientEntity, Long> {
     Boolean existsByEmail(String email);
-
-    Optional<ClientEntity> detailsByIdAndEmail(String email);
 }

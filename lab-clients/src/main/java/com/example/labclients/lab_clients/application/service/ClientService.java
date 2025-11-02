@@ -33,15 +33,9 @@ public class ClientService {
                 .collect(Collectors.toList());
     }
 
-    public ClientDTO getClientById(UUID id){
+    public ClientDTO getClientById(Long id){
         return this.clientRepository.findById(id)
                 .map(ClientMapper::toDto)
                 .orElseThrow(() -> new RuntimeException("Client not found"));
     }
-
-    public Client getClientDetailsById(String email){
-        return this.clientRepository.detailsByIdAndEmail(email)
-                .orElseThrow(() -> new RuntimeException("Client not found"));
-    }
-
 }

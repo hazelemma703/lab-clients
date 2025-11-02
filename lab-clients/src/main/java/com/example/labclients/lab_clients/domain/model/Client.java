@@ -12,7 +12,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Builder
 public class Client {
-    private UUID id;
+    private Long id;
 
     private String name;
     private String email;

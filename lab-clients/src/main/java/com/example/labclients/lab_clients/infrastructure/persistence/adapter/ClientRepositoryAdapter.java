@@ -4,11 +4,13 @@ import com.example.labclients.lab_clients.domain.model.Client;
 import com.example.labclients.lab_clients.domain.repository.ClientRepository;
 import com.example.labclients.lab_clients.infrastructure.persistence.entity.ClientEntity;
 import com.example.labclients.lab_clients.infrastructure.persistence.jpa.SpringDataClientRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+@Repository
 public class ClientRepositoryAdapter implements ClientRepository {
 
     private final SpringDataClientRepository jpaRepository;
@@ -33,7 +35,7 @@ public class ClientRepositoryAdapter implements ClientRepository {
     }
 
     @Override
-    public Optional<Client> findById(UUID id) {
+    public Optional<Client> findById(Long id) {
         return this.jpaRepository.findById(id).map(e -> Client.builder()
                 .id(e.getId())
                 .name(e.getName())
@@ -55,15 +57,5 @@ public class ClientRepositoryAdapter implements ClientRepository {
     @Override
     public boolean existsByEmail(String email) {
         return this.jpaRepository.existsByEmail(email);
-    }
-
-    @Override
-    public Optional<Client> detailsByIdAndEmail(String email) {
-        return this.jpaRepository.detailsByIdAndEmail(email).map(e -> Client.builder()
-                .id(e.getId())
-                .name(e.getName())
-                .email(e.getEmail())
-                .phone(e.getPhone())
-                .build());
     }
 }
