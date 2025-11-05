@@ -1,11 +1,6 @@
 package com.example.labclients.lab_clients.domain.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.util.UUID;
+import lombok.*;
 
 @Data
 @AllArgsConstructor

@@ -3,7 +3,6 @@ package com.example.labclients.lab_clients.infrastructure.persistence.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.UUID;
 
 @Entity
 @Table(name = "clients")
