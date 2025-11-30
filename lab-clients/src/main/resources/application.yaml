@@ -2,7 +2,6 @@ spring:
   application:
     name: backend
   datasource:
-    #          postgresql://ep-soft-frost-a5jrxwwz-pooler.us-east-2.aws.neon.tech/weather_db?sslmode=require&channel_binding=require'
     url: 'jdbc:postgresql://ep-soft-frost-a5jrxwwz-pooler.us-east-2.aws.neon.tech/weather_db?sslmode=require&channel_binding=require'
     username: weather_db_owner
     password: 1RKIPdo8uAvT

@@ -6,7 +6,6 @@ import com.example.labclients.lab_clients.domain.model.Client;
 import com.example.labclients.lab_clients.domain.repository.ClientRepository;
 
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class ClientService {
