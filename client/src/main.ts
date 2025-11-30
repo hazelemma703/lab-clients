@@ -5,7 +5,9 @@ import { ClientUi } from "./modules/clients/clientUi";
 import { ProductUi } from "./modules/products/productUi";
 import { Products } from "./modules/products/Products";
 
-const httpClient = new FetchHttpClient();
+const API_URL = import.meta.env.VITE_API_URL;
+
+const httpClient = new FetchHttpClient(API_URL);
 
 const clientsModule = new Clients(httpClient);
 const productsModule = new Products(httpClient);
